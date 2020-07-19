@@ -1,9 +1,6 @@
 package com.hrms.steps;
 
-import static org.testng.Assert.assertEquals;
-
-import java.util.List;
-import java.util.Map;
+import static org.junit.Assert.assertEquals;
 
 import com.hrms.utils.CommonMethods;
 
