@@ -1,7 +1,5 @@
 package com.hrms.steps;
 
-import static org.testng.Assert.assertEquals;
-
 import java.util.List;
 import java.util.Map;
 
