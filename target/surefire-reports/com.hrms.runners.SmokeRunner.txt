@@ -1,6 +1,9 @@
 -------------------------------------------------------------------------------
 Test set: com.hrms.runners.SmokeRunner
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 29.877 s - in com.hrms.runners.SmokeRunner
+=======
 Tests run: 5, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 108.549 s <<< FAILURE! - in com.hrms.runners.SmokeRunner
 Add new Employee.AddEmployee and create Login Credentials  Time elapsed: 26.538 s  <<< ERROR!
 org.openqa.selenium.NoSuchElementException: 
@@ -26,3 +29,4 @@ Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 8
 Session ID: c65e0e568a67424e853650575765dd3c
 *** Element info: {Using=xpath, value=//table[@id='resultTable']//tbody//tr[1]//td[2]}
 
+>>>>>>> ad3abd1d47c5b34ee7a67bf00537844430a45015

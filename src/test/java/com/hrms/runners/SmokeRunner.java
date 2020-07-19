@@ -15,13 +15,13 @@ import io.cucumber.junit.CucumberOptions;
 	//if set to true no actual execution will happen 
 	//so if we don’t want to waste time on missing steps, we should dryRun=true first when everything has implementation good we can dryRun=false
 		
-		monochrome=false,
+		monochrome=true,
 		//strict=true,
-		tags="@smoke"//setting groups for 
+		tags="@SQL_LastNameValidation"//setting groups for 
 		,plugin= {
 				"pretty"//, "html:/cucumber-default-reports",//prints gherkin steps in console while running
 				,"html:target/cucumber-default-report"
-				,"json:target/cucumber.json"
+				,"json:target/cucumber-json",
 		}
 		
 		)

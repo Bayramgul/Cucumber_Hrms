@@ -34,10 +34,10 @@ public class AddEmployee extends CommonMethods {
 
 	@Then("{string} is added successfully")
 	public void employee_is_added_successfully(String string) {
-		String actual = pdetails.profilePic.getText();
-		String expected = string;
+		String  expected= pdetails.profilePic.getText();
+		String actual = string;
 		Assert.assertEquals(expected, actual);
-		takesScreenshot("AddEmployee");
+		//takesScreenshot("AddEmployee");
 	}
 
 	@When("user deletes employee id")
@@ -72,8 +72,7 @@ public class AddEmployee extends CommonMethods {
 	}
 
 	@When("user enters employee details and click on save then employee is added")
-	public void user_enters_employee_details_and_click_on_save_then_employee_is_added(
-			io.cucumber.datatable.DataTable dataTable) {
+	public void AddEmpDataTable(io.cucumber.datatable.DataTable dataTable) {
 		List<Map<String, String>> addEmployeeList = dataTable.asMaps();
 		for (Map<String, String> emp : addEmployeeList) {
 			sendText(addEmp.firstName, emp.get("FirstName"));
@@ -97,7 +96,6 @@ public class AddEmployee extends CommonMethods {
 			sendText(addEmp.firstName, l.get("firstName"));
 			sendText(addEmp.lastName, l.get("lastName"));
 			WaitandClick(addEmp.btnSave);
-			
 			String actual = pdetails.profilePic.getText();
 			String expected = l.get("firstName") + " " + l.get("lastName");
 			Assert.assertEquals("Employee is not addedd successfully", expected, actual);
@@ -105,5 +103,4 @@ public class AddEmployee extends CommonMethods {
 			sleep(5);
 		}
 	}
-
 }

@@ -16,7 +16,7 @@ public class ExcelUtility {
 	public static Sheet sheet;
 	private static void openExcel(String filePath) {
 		try {//building path btw excel file 
-			FileInputStream fileIS = new FileInputStream(filePath);
+			FileInputStream fileIS = new FileInputStream(filePath);//fise taktik 
 			book = new XSSFWorkbook(fileIS);
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -54,7 +54,6 @@ public class ExcelUtility {
 	public static List<Map<String,String>> excelIntoListOfMAps(String filePath,String sheetName ){
 		openExcel(filePath);
 		loadSheet(sheetName);
-		
 		
 		List<Map<String,String>> list=new LinkedList<>();
 		Map<String,String> excelMap;

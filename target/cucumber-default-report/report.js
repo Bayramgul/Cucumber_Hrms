@@ -1,5 +1,8 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/AddEmployee.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/EmpLastNameValidation.feature");
 formatter.feature({
+<<<<<<< HEAD
+  "name": "LastName validation",
+=======
   "name": "Add new Employee",
   "description": "",
   "keyword": "Feature"
@@ -170,136 +173,24 @@ formatter.after({
 formatter.uri("file:src/test/resources/features/Dashboard.feature");
 formatter.feature({
   "name": "Dashboard",
+>>>>>>> ad3abd1d47c5b34ee7a67bf00537844430a45015
   "description": "",
   "keyword": "Feature",
   "tags": [
     {
-      "name": "@smoke"
-    },
-    {
-      "name": "@Dashboard"
+      "name": "@SQL_LastNameValidation"
     }
   ]
 });
 formatter.scenario({
-  "name": "Dashboard menu view for admin",
+  "name": "Employee LastName Validation from UI to DB",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@smoke"
-    },
-    {
-      "name": "@Dashboard"
+      "name": "@SQL_LastNameValidation"
     }
   ]
-});
-formatter.before({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user logins with valid admin credentials",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "com.hrms.steps.Login_As_Emp_ESS.user_logins_with_valid_admin_credentials()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user see dahshboard menu is displayed",
-  "rows": [
-    {}
-  ],
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "com.hrms.steps.DashboardSteps.user_see_dahshboard_menu_is_displayed(io.cucumber.datatable.DataTable)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.after({
-  "status": "passed"
-});
-formatter.uri("file:src/test/resources/features/Login.feature");
-formatter.feature({
-  "name": "Login",
-  "description": "",
-  "keyword": "Feature"
-});
-formatter.scenario({
-  "name": "Login with valid username and invalid password",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@smoke"
-    }
-  ]
-});
-formatter.before({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters valid username",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "com.hrms.steps.LoginSteps.user_enters_valid_username()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters invalid password",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "com.hrms.steps.LoginSteps.user_enters_invalid_password()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "clicks on login button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "com.hrms.steps.LoginSteps.clicks_on_login_button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user see “Invalid credentials” error message",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "com.hrms.steps.LoginSteps.user_see_Invalid_credentials_error_message()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.after({
-  "status": "passed"
-});
-formatter.uri("file:src/test/resources/features/SearchEmployee.feature");
-formatter.feature({
-  "name": "Employee Search",
-  "description": "",
-  "keyword": "Feature",
-  "tags": [
-    {
-      "name": "@searchEmployee"
-    }
-  ]
-});
-formatter.background({
-  "name": "",
-  "description": "",
-  "keyword": "Background"
 });
 formatter.before({
   "status": "passed"
@@ -315,54 +206,51 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user navigates to EmployeeList page",
+  "name": "User searches employee by ID \"14688\"",
   "keyword": "And "
 });
 formatter.match({
-  "location": "com.hrms.steps.EmployeeSearchSteps.user_navigates_to_EmployeeList_page()"
+  "location": "com.hrms.steps.ModifyPersonalDetails.clicks_on_PIM_and_searches_employee_by_name_or_ID_and_clicks_from_dataTable(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
-formatter.scenario({
-  "name": "Search employee by Id",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@searchEmployee"
-    },
-    {
-      "name": "@smoke"
-    }
-  ]
+formatter.step({
+  "name": "verify lastname is displayed",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.hrms.steps.EmpLAstNameValidationSteps.verify_table_is_displayed()"
+});
+formatter.result({
+  "status": "passed"
 });
 formatter.step({
-  "name": "user enters valid employee id \"10324\"",
+  "name": "get lastname from table",
   "keyword": "When "
 });
 formatter.match({
-  "location": "com.hrms.steps.EmployeeSearchSteps.user_enters_valid_employee_ID(java.lang.String)"
+  "location": "com.hrms.steps.EmpLAstNameValidationSteps.get_lastname_from_table()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user clicks on the search button",
+  "name": "get  lastname from db",
   "keyword": "And "
 });
 formatter.match({
-  "location": "com.hrms.steps.EmployeeSearchSteps.user_clicks_on_the_search_button()"
+  "location": "com.hrms.steps.EmpLAstNameValidationSteps.get_lastname_from_db()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user see employee id \"10324\" is displayed",
+  "name": "validate lastname from UI againist Db",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.hrms.steps.EmployeeSearchSteps.user_see_employee_information_is_displayed(java.lang.String)"
+  "location": "com.hrms.steps.EmpLAstNameValidationSteps.validate_lastname_from_UI_againist_Db()"
 });
 formatter.result({
   "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//table[@id\u003d\u0027resultTable\u0027]//tbody//tr[1]//td[2]\"}\n  (Session info: chrome\u003d84.0.4147.89)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027Annas-MacBook-Air.local\u0027, ip: \u00272600:8806:2100:1230:5837:19ad:4ca0:6d51%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.15.4\u0027, java.version: \u002712.0.1\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.89, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: /var/folders/p_/rt_svhd10jj...}, goog:chromeOptions: {debuggerAddress: localhost:55278}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: c65e0e568a67424e853650575765dd3c\n*** Element info: {Using\u003dxpath, value\u003d//table[@id\u003d\u0027resultTable\u0027]//tbody//tr[1]//td[2]}\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\n\tat com.sun.proxy.$Proxy19.getText(Unknown Source)\n\tat com.hrms.steps.EmployeeSearchSteps.user_see_employee_information_is_displayed(EmployeeSearchSteps.java:40)\n\tat ✽.user see employee id \"10324\" is displayed(file:///Users/annaannayev/eclipse-workspace/Cucumber_Hrms/src/test/resources/features/SearchEmployee.feature:12)\n",
