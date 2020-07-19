@@ -34,6 +34,9 @@ public class DashBoardPage extends com.hrms.utils.CommonMethods {
 		@FindBy(xpath="//span[text()='Timesheets']")
 		public WebElement Timesheets;
 		
+		@FindBy(linkText="Admin")
+		public WebElement Admin;
+		
 		public DashBoardPage(){
 			PageFactory.initElements(BaseClass.driver, this);	
 		}

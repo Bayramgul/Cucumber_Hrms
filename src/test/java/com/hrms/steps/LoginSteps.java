@@ -1,11 +1,15 @@
 package com.hrms.steps;
 
+import static org.testng.Assert.assertEquals;
+
+import java.util.List;
+import java.util.Map;
+
 import org.junit.Assert;
 
 import com.hrms.utils.CommonMethods;
 import com.hrms.utils.ConfigsReader;
 
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
@@ -67,5 +71,17 @@ public class LoginSteps extends CommonMethods {
 		Assert.assertEquals(expectedErrorMsg, actualErrorMsg);
 		takesScreenshot("EmptyUsernameErrorMsg");
 	}
-
+//	@When("I enter invalid UserName and Password and see ErrorMessage")
+//	public void i_enter_invalid_UserName_and_Password_and_see_ErrorMessage(io.cucumber.datatable.DataTable dataTable) {
+//	    
+//		List<Map<String,String>> list=dataTable.asMaps();
+//	for(Map<String,String> l:list) {
+//		sendText(login.username, l.get("UserName"));
+//		sendText(login.password, l.get("Password"));
+//		WaitandClick(login.loginBTN);
+//		String actual=login.errorMessage.getText();
+//		String expected=l.get("ErrorMessage");
+//		assertEquals(actual, expected);
+//	}
+//	}
 }

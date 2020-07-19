@@ -6,7 +6,7 @@ Feature: Add new Employee
 
   @smoke
   Scenario: Add Employee with first and lastname
-    When user enters employees "John" and "Smith"
+    When user enters employees "John" and "Smith" 
     And user clicks save button
     Then "John Smith" is added successfully
 @regression
@@ -24,7 +24,7 @@ Feature: Add new Employee
    Then "John Smith" is added successfully
 
   #to perform DDT in cucumber we use Scenario Outline with Examples
-  @regression 
+  @regression @DataTExanples
   Scenario Outline: Adding multiple employees
     When user enters employee "<FirstName>","<MiddleName>" and "<LastName>"
     And user clicks save button

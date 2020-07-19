@@ -13,14 +13,14 @@ import io.cucumber.java.en.When;
 
 public class ModifyPersonalDetails extends CommonMethods {
 
-	@Given("clicks on PIM and searches employee by {string} and clicks from dataTable")
+	@Given("User searches employee by ID {string}")
 	public void clicks_on_PIM_and_searches_employee_by_name_or_ID_and_clicks_from_dataTable(String EmpID) {
 		WaitandClick(dashboard.pim);
 		sleep(2);
 		sendText(empList.EmpID, EmpID);
 		WaitandClick(empList.searchBtn);
 		sleep(1);
-		WaitandClick(empList.empIDValidation);
+//		WaitandClick(empList.empIDValidation);
 		
 		//empList.chooseEmp(EmpID);
 	}
