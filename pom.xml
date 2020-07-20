@@ -62,7 +62,12 @@
 			<artifactId>webdrivermanager</artifactId>
 			<version>3.8.1</version>
 		</dependency>
+<<<<<<< Updated upstream
 <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java  -->
+=======
+
+<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+>>>>>>> Stashed changes
 <dependency>
     <groupId>mysql</groupId>
     <artifactId>mysql-connector-java</artifactId>
@@ -115,8 +120,11 @@
     <scope>test</scope>
 </dependency>
 
+<<<<<<< Updated upstream
 
 
+=======
+>>>>>>> Stashed changes
 	</dependencies>
 
 	<build>
